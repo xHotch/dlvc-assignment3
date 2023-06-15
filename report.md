@@ -5,6 +5,8 @@
 
 # Overview
 
+Paper link: https://arxiv.org/abs/2302.05543
+
 # Installation & Setup
 The code for ControlNet was downloaded from the official python implementation (https://github.com/lllyasviel/ControlNet) and placed into src/ControlNet.
 
