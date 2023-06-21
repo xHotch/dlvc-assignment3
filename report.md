@@ -1,13 +1,7 @@
-- What did you do?
-- ~~Where did you download the code (including links)? Did you change anything and (if so) what?~~
-- ~~Did you have problems running the code? If so, how did you fix them?~~
-- Which tests did you perform and what are the results? Discuss the results and include images and figures.
-
 # Overview
+For Assignment 3, we decided to experiment with the ControlNet model from the paper "Adding conditional control to text-to-image diffusion models" by Zhang and Agrawala [5]. ControlNet is able to generate images from text prompts using pretrained diffusion models by adding additional weights that guide the outcome. To achieve this, they provide pretrained ControlNet models that each work for a specific type of conditional input. This includes user generated scribbles or preprocessing of existing images such as depth estimation, semantic segmentation or line detection.
 
-TODO: Describe "What did you do?"
-TODO: Maybe Describe what the paper is about (no details, just short general idea)
-Paper link: https://arxiv.org/abs/2302.05543
+We experimented with the different models and their ability to guide image generation. For the tests we describe in this report, we focused on testing whether we can use ControlNet for synthetic data generation, using the example of tennis court recognition.
 
 # Installation & Setup
 The code for ControlNet was downloaded from the official python implementation[1] and placed into src/ControlNet.
@@ -39,7 +33,7 @@ To run our experiments, we used the provided gradio Scripts(gradio_*.py).
 # Tests
 ## Synthetic data generation
 
-In the first test, we want to see whether we can use ControlNet to create synthetic datasets for keypoint detection models.
+We want to see whether we can use ControlNet to create synthetic datasets for keypoint detection models.
 
 The idea for this test came from previous experiments with standard diffusion models. We encountered two main problems when generating such data using diffusion models without any conditional input:
 
@@ -126,8 +120,6 @@ More in-depth experiments or better knowledge of prompt engineering could perhap
 
 Better results could be obtained by training a specific model with a custom conditional input for this task instead of using pretrained models.
 
-## Test 2: TODO: (Maybe not even needed? Report should be ~4 pages)
-
 # References
 [1] https://github.com/lllyasviel/ControlNet, accessed on 19.06.2023
 
@@ -136,3 +128,6 @@ Better results could be obtained by training a specific model with a custom cond
 [3] https://freerangestock.com/photos/39555/tennis-court.html, accessed on 19.06.2023
 
 [4] https://github.com/lllyasviel/ControlNet/issues/3, accessed on 19.06.2023
+
+[5] Zhang, Lvmin, and Maneesh Agrawala. "Adding conditional control to text-to-image diffusion models." arXiv preprint arXiv:2302.05543 (2023).
+
