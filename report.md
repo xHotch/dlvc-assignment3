@@ -41,7 +41,7 @@ The idea for this test came from previous experiments with standard diffusion mo
 - We not have labels for the generated data
 
 
-<img src="src/images/Test_1/sd_15.jpeg" width="50%" />
+<img src="src/images/TennisCourt/sd_15.jpeg" width="50%" />
 
 *Figure 1: Tennis court generated using stable diffusion 1.5*
 
@@ -52,20 +52,20 @@ We will test this hypothesis using the example of tennis court recognition. Note
 All the conditional inputs for this task are based on the same reference image, which was taken from [3].
 
 
-<img src="src/images/Test_1/reference.jpeg" width="50%" />
+<img src="src/images/TennisCourt/reference.jpeg" width="50%" />
 
 *Figure 2: Tennis court reference image*
 
 
 
 ### Line Annotations
-![Alt text](src/images/Test_1/line_annotations.png)
+![Alt text](src/images/TennisCourt/line_annotations.png)
 *Figure 3: Different conditional inputs.
 Left: Canny edge detection, Middle: Hough lines, Right: Scribble*
 
 We obtained the best results when using conditional inputs that preserve much of the tennis court information.
 
-<img src="src/images/Test_1/tmp4t5t1e44.png" width="50%" />
+<img src="src/images/TennisCourt/tmp4t5t1e44.png" width="50%" />
 
 *Figure 4: Generated image using Canny edges as conditional input*
 
@@ -78,9 +78,9 @@ The following images were all generated using the following prompt:
 
 ```indoor tennis court, no players, concrete walls, ceiling lighting```
 <p float="left">
-  <img src="src/images/Test_1/5guid/tmptjf255fl.png" width="32%" />
-  <img src="src/images/Test_1/17guid/tmpw246p0ul.png" width="32%" /> 
-  <img src="src/images/Test_1/35steps/tmp_cxpyo_9.png" width="32%" />
+  <img src="src/images/TennisCourt/tmptjf255fl.png" width="32%" />
+  <img src="src/images/TennisCourt/tmpw246p0ul.png" width="32%" /> 
+  <img src="src/images/TennisCourt/tmp_cxpyo_9.png" width="32%" />
 </p>
 
 *Figure 5: Images generated using the scribble as annotation, with different parameters for guidance and number of diffusion steps*
@@ -90,7 +90,7 @@ We did not notice siginificant differences in the images when altering the guida
 In the above Images as well as in other generated images, we noticed that the biggest problem for the model is the accurate generation of the net.
 
 
-<img src="src/images/Test_1/tmp9ysuhlyu.png" width="50%" />
+<img src="src/images/TennisCourt/tmp9ysuhlyu.png" width="50%" />
 
 *Figure 6: Wrong court geometry when using Hough lines as conditional input*
 
@@ -101,7 +101,7 @@ Using the following prompt:
 ```red clay tennis court, stock photo, no players```
 we noticed that this can generate artifacts, as seen in Figure 6.
 
-<img src="src/images/Test_1/stock.png" width="50%" />
+<img src="src/images/TennisCourt/stock.png" width="50%" />
 
 *Figure 7: Generated image with visible artifact due to "stock photo" text prompt*
 
@@ -109,7 +109,7 @@ we noticed that this can generate artifacts, as seen in Figure 6.
 
 Using semantic annotations as the conditional input for the diffusion model did not yield good results for this task. This makes sense, as the semantic segmentation does not contain any information about the geometry of the tennis court but only where the tennis court is compared to the background.
 
-![Alt text](src/images/Test_1/segmentation.png)
+![Alt text](src/images/TennisCourt/segmentation.png)
 *Figure 8: Left: Semantic segmentation annotation Right: Generated image*
 
 ### Conclusion
